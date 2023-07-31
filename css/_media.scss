@@ -1,0 +1,139 @@
+@media(max-width:375px) {
+    .background {
+        padding-top: 48px;
+        background-image: url(../images/bg-mobile-light.jpg);
+        min-height: 200px;
+        background-position: bottom;
+
+        &.darkMode {
+            background-image: url(../images/bg-mobile-dark.jpg);
+            background-position: top;
+        }
+
+        &__inner {
+            gap: 196px;
+        }
+
+        .logo {
+            width: 109px;
+            height: 20px;
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .todo {
+        max-width: 327px;
+        top: 108px;
+
+        &__input {
+            height: 48px;
+            border-radius: 5px;
+            background: #FFF;
+            box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.50);
+            outline: none;
+            border: none;
+            font-family: 'Josefin Sans';
+            font-size: 12px;
+            letter-spacing: -0.167px;
+            margin-bottom: 16px;
+            padding-left: 52px;
+            color: #393A4B;
+        }
+
+        label::before {
+            position: absolute;
+            content: "";
+            width: 20px;
+            height: 20px;
+            left: 24px;
+            top: 14px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &__block-inner{
+            margin-bottom: 104px;
+        }
+
+        li {
+            height: 53px;
+            font-size: 12px;
+            letter-spacing: -0.167px;
+            padding-right: 20px;
+            padding-left: 52px;
+        }
+
+        li::before {
+            width: 20px;
+            height: 20px;
+            left: 24px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        li.completed {
+            height: 53px;
+            font-size: 12px;
+            letter-spacing: -0.167px;
+            padding-left: 52px;
+        }
+
+        li.completed::before {
+            width: 20px;
+            height: 20px;
+            left: 24px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .deleteBtn {
+            width: 12px;
+            height: 12px;
+            background-size: cover;
+        }
+
+        &__more-info {
+            position: relative;
+        }
+
+        &__left {
+            font-size: 12px;
+            letter-spacing: -0.167px;
+        }
+
+        &__items-filter {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -67px;
+            border-radius: 5px;
+            background: #FFF;
+            box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.50);
+            max-width: 327px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            height: 48px;
+        }
+
+        &.darkMode{
+            .todo__items-filter {
+                background-color: #25273D;
+                box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.50);                
+            }
+        }
+
+        .clear {
+            font-size: 12px;
+            letter-spacing: -0.167px;
+        }
+
+        .bottom__text{
+            margin-bottom: 72px;
+        }
+    }
+}

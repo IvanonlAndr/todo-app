@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Document</title>
+</head>
+
+<body class="bodyLightMode">
+  <section class="background">
+    <section class="background__inner">
+      <img src="./images/main-logo.svg" alt="" class="logo">
+      <img src="./images/icon-moon.svg" alt="" class="icon" id="iconLightMode">
+    </section>
+  </section>
+  <section class="todo">
+    <section class="todo__inner">
+      <label for="todoCreate"></label>
+      <input type="text" class="todo__input" id="todoCreate" placeholder="Create a new todo…">
+      <section class="todo__block-inner">
+        <ul>
+          <li class="completed" draggable="true">Complete online JavaScript course</li>
+          <li draggable="true">Jog around the park 3x</li>
+          <li draggable="true">10 minutes meditation</li>
+          <li draggable="true">Read for 1 hour</li>
+          <li draggable="true">Pick up groceries</li>
+          <li draggable="true">Complete Todo App on Frontend Mentor</li>
+        </ul>
+        <section class="todo__more-info">
+          <div class="todo__left"><span id="itemsLeft"></span> items left</div>
+          <div class="todo__items-filter">
+            <button class="todo__text-filter" id="all">All</button>
+            <button class="todo__text-filter" id="active">Active</button>
+            <button class="todo__text-filter" id="completed">Completed</button>
+          </div>
+          <button class="clear">Clear Completed</button>
+        </section>
+      </section>
+    </section>
+    <p class="bottom__text">Drag and drop to reorder list</p>
+  </section>
+</body>
+<script src="./script.js"></script>
+</html>

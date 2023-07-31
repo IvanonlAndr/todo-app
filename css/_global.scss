@@ -1,0 +1,35 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic);
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: -0.25px;
+    font-family: 'Josefin Sans';
+    height: 100vh;
+    &.bodyLightMode {
+        background-color: #fff;
+
+        &.darkMode{
+            background-color: #171823;
+        }
+    }
+}
+
+ul{
+    list-style: none;
+    padding-left: 0;
+}

@@ -1,0 +1,375 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic);
+.background {
+  display: flex;
+  justify-content: center;
+  padding-top: 70px;
+  position: relative;
+  background-image: url(../images/bg-desktop-light.jpg);
+  width: 100%;
+  min-height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.background.darkMode {
+  background-image: url(../images/bg-desktop-dark.jpg);
+  background-position: top left;
+}
+.background__inner {
+  display: flex;
+  gap: 348px;
+  align-items: flex-start;
+}
+
+.todo {
+  width: 100%;
+  max-width: 540px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 158px;
+}
+.todo.darkMode .todo__input {
+  background-color: #25273D;
+  box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
+  color: #C8CBE7;
+}
+.todo.darkMode label::before {
+  background-image: url(../images/checkboxDarkMode.svg);
+}
+.todo.darkMode .todo__block-inner {
+  background-color: #25273D;
+  box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
+}
+.todo.darkMode li {
+  background-color: #25273D;
+  color: #C8CBE7;
+}
+.todo.darkMode li.completed {
+  background-color: #25273D;
+  color: #4D5067;
+}
+.todo.darkMode li.completed::before {
+  background-image: url(../images/checkedbox.svg);
+}
+.todo.darkMode li::before {
+  background-image: url(../images/checkboxDarkMode.svg);
+}
+.todo.darkMode .todo__left {
+  color: #5B5E7E;
+}
+.todo.darkMode .todo__text-filter {
+  color: #5B5E7E;
+}
+.todo.darkMode .clear {
+  color: #5B5E7E;
+}
+.todo.darkMode .bottom__text {
+  color: #5B5E7E;
+}
+.todo__inner {
+  display: flex;
+  flex-direction: column;
+}
+.todo__block-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 5px;
+  background: #FFF;
+  box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+  min-height: 64px;
+  margin-bottom: 49px;
+}
+.todo__input {
+  height: 64px;
+  border-radius: 5px;
+  background: #FFF;
+  box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+  outline: none;
+  border: none;
+  font-family: "Josefin Sans";
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.25px;
+  padding-left: 72px;
+  margin-bottom: 24px;
+  color: #393A4B;
+}
+.todo label {
+  position: relative;
+}
+.todo label::before {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 24px;
+  left: 24px;
+  top: 20px;
+  background-image: url(../images/checkbox.svg);
+}
+.todo li {
+  height: 64px;
+  background: #FFF;
+  outline: none;
+  border: none;
+  font-family: "Josefin Sans";
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.25px;
+  padding-left: 72px;
+  padding-right: 24px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #E3E4F1;
+  position: relative;
+  color: #494C6B;
+}
+.todo li:nth-child(1) {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.todo li::before {
+  position: absolute;
+  content: "";
+  background-image: url(../images/checkbox.svg);
+  width: 24px;
+  height: 24px;
+  left: 24px;
+}
+.todo .deleteBtn {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-image: url(../images/icon-cross.svg);
+  right: 24px;
+  display: none;
+  background-repeat: no-repeat;
+  z-index: 1000;
+}
+.todo li:hover .deleteBtn {
+  display: block;
+}
+.todo .deleteBtn::before {
+  display: none;
+}
+.todo li.completed {
+  -webkit-text-decoration: line-through 1px #D1D2DA;
+          text-decoration: line-through 1px #D1D2DA;
+  color: #D1D2DA;
+  height: 64px;
+  background: #FFF;
+  outline: none;
+  border: none;
+  font-family: "Josefin Sans";
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.25px;
+  padding-left: 72px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #E3E4F1;
+  position: relative;
+}
+.todo .completed::before {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  content: "";
+  background-image: url(../images/checkedbox.svg);
+  left: 24px;
+}
+.todo__more-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 51px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.todo__left {
+  font-size: 14px;
+  color: #9495A5;
+}
+.todo button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-family: "Josefin Sans";
+  cursor: pointer;
+}
+.todo__items-filter {
+  display: flex;
+  gap: 19px;
+}
+.todo__text-filter {
+  font-size: 14px;
+  font-weight: 700;
+  color: #9495A5;
+}
+.todo .clear {
+  color: #9495A5;
+  font-size: 14px;
+  font-weight: 400;
+}
+.todo .bottom__text {
+  text-align: center;
+  color: #9495A5;
+  font-family: "Josefin Sans";
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.194px;
+  margin-bottom: 52px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.25px;
+  font-family: "Josefin Sans";
+  height: 100vh;
+}
+body.bodyLightMode {
+  background-color: #fff;
+}
+body.bodyLightMode.darkMode {
+  background-color: #171823;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+@media (max-width: 375px) {
+  .background {
+    padding-top: 48px;
+    background-image: url(../images/bg-mobile-light.jpg);
+    min-height: 200px;
+    background-position: bottom;
+  }
+  .background.darkMode {
+    background-image: url(../images/bg-mobile-dark.jpg);
+    background-position: top;
+  }
+  .background__inner {
+    gap: 196px;
+  }
+  .background .logo {
+    width: 109px;
+    height: 20px;
+  }
+  .background .icon {
+    width: 20px;
+    height: 20px;
+  }
+  .todo {
+    max-width: 327px;
+    top: 108px;
+  }
+  .todo__input {
+    height: 48px;
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+    outline: none;
+    border: none;
+    font-family: "Josefin Sans";
+    font-size: 12px;
+    letter-spacing: -0.167px;
+    margin-bottom: 16px;
+    padding-left: 52px;
+    color: #393A4B;
+  }
+  .todo label::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    left: 24px;
+    top: 14px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .todo__block-inner {
+    margin-bottom: 104px;
+  }
+  .todo li {
+    height: 53px;
+    font-size: 12px;
+    letter-spacing: -0.167px;
+    padding-right: 20px;
+    padding-left: 52px;
+  }
+  .todo li::before {
+    width: 20px;
+    height: 20px;
+    left: 24px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .todo li.completed {
+    height: 53px;
+    font-size: 12px;
+    letter-spacing: -0.167px;
+    padding-left: 52px;
+  }
+  .todo li.completed::before {
+    width: 20px;
+    height: 20px;
+    left: 24px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .todo .deleteBtn {
+    width: 12px;
+    height: 12px;
+    background-size: cover;
+  }
+  .todo__more-info {
+    position: relative;
+  }
+  .todo__left {
+    font-size: 12px;
+    letter-spacing: -0.167px;
+  }
+  .todo__items-filter {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -67px;
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+    max-width: 327px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+  }
+  .todo.darkMode .todo__items-filter {
+    background-color: #25273D;
+    box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
+  }
+  .todo .clear {
+    font-size: 12px;
+    letter-spacing: -0.167px;
+  }
+  .todo .bottom__text {
+    margin-bottom: 72px;
+  }
+}/*# sourceMappingURL=style.css.map */
